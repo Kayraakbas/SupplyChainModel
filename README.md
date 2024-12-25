@@ -46,7 +46,7 @@ For this project, **AnyLogic** was used to simulate the supply chain system. Any
   - **Weekends (Saturday - Sunday)**: 2 customers per hour.
 - **Implementation**: A weekly schedule was created in the simulation.
   
-![Customer Arrival Rate Schedule](img/backOrder.png)
+![Customer Arrival Rate Schedule](img/customerArrivalRate Schedule.png)
 
 ---
 
@@ -54,7 +54,7 @@ For this project, **AnyLogic** was used to simulate the supply chain system. Any
 - **Initial Value**: 200 products.  
 - **Type**: Set as an integer.  
 
-![Inventory](path_to_inventory_image)
+![Inventory](img/inventory.png)
 
 ---
 
@@ -62,7 +62,7 @@ For this project, **AnyLogic** was used to simulate the supply chain system. Any
 - **Description**:  
   When an order from the factory reaches the store, the backordered products are reset to 0.
 
-![Back Order](path_to_back_order_image)
+![Back Order](img/backOrder.png)
 
 ---
 
@@ -70,7 +70,7 @@ For this project, **AnyLogic** was used to simulate the supply chain system. Any
 - **Source**: Customers arrive based on the defined rate schedule.  
 - **Arrival Definition**: The `customerArrivalRate` schedule determines the arrival rate.
 
-![Customer](path_to_customer_image)
+![Customer](img/customerSource.png)
 
 ---
 
@@ -80,7 +80,7 @@ For this project, **AnyLogic** was used to simulate the supply chain system. Any
   2. If there are customers in the queue and stock is available, the stock decreases by 1 per customer.  
   3. If the inventory is ≤0, customers wait in the queue (handled by the hold block).  
 
-![Store Queue](path_to_store_queue_image)
+![Store Queue](img/storeQueue.png)
 
 ---
 
@@ -88,7 +88,7 @@ For this project, **AnyLogic** was used to simulate the supply chain system. Any
 - **Description**:  
   This block allows customers to wait in the queue if stock is unavailable.
 
-![Hold](path_to_hold_image)
+![Hold](img/hold.png)
 
 ---
 
@@ -96,7 +96,7 @@ For this project, **AnyLogic** was used to simulate the supply chain system. Any
 - **Purpose**:  
   To add realism, varying delay times were introduced for customer shopping.
 
-![Customer Delay](path_to_customer_delay_image)
+![Customer Delay](img/customerDelay.png)
 
 ---
 
@@ -106,7 +106,7 @@ For this project, **AnyLogic** was used to simulate the supply chain system. Any
 - **Action**:  
   Initiates production of 200 new products by the factory.
 
-![Event](path_to_event_image)
+![Event](img/event.png)
 
 ---
 
@@ -114,7 +114,7 @@ For this project, **AnyLogic** was used to simulate the supply chain system. Any
 - **Trigger**:  
   When stock is below 100, the production of 200 new products begins.
 
-![Production](path_to_production_image)
+![Production](img/productionSource.png)
 
 ---
 
@@ -123,7 +123,7 @@ For this project, **AnyLogic** was used to simulate the supply chain system. Any
   Operates on a First-In-First-Out (FIFO) basis.  
 - **Realism**: Production occurs sequentially rather than all at once.
 
-![Factory Orders](path_to_factory_orders_image)
+![Factory Orders](img/factoryOrder.png)
 
 ---
 
@@ -135,7 +135,7 @@ For this project, **AnyLogic** was used to simulate the supply chain system. Any
   - Maximum: 4 days  
 - **Effect**: Inventory increases by 1 for each completed production.
 
-![Factory Delay](path_to_factory_delay_image)
+![Factory Delay](img/factorDelay.png)
 
 ---
 
@@ -145,7 +145,7 @@ For this project, **AnyLogic** was used to simulate the supply chain system. Any
   - Backorders are reset to 0.  
   - The event restarts for the next production cycle.
 
-![Sink](path_to_sink_image)
+![Sink](img/sink1.png)
 
 ---
 
@@ -153,7 +153,7 @@ For this project, **AnyLogic** was used to simulate the supply chain system. Any
 - **Time Chart**:  
   Displays changes in the number of products in the store over time.
 
-![Inventory Time Chart](path_to_inventory_time_chart_image)
+![Inventory Time Chart](img/inventoryChart.png)
 
 ---
 
@@ -161,4 +161,21 @@ For this project, **AnyLogic** was used to simulate the supply chain system. Any
 - **Bar Chart**:  
   Shows a single column representing the current inventory in the store.
 
-![Inventory Bar Chart](path_to_inventory_bar_chart_image)
+![Inventory Bar Chart](img/inventoryChart.png)
+
+---
+
+## Model Overview
+
+![Model Overview](img/ModelOverView.png)
+
+This image provides a schematic representation of the simulated supply chain system in AnyLogic.
+
+
+## Simulation Overview
+![Simulation Overview](img/SimulatorOverView.png)
+
+This image captures a running simulation of the supply chain model.
+
+These images demonstrate how the system dynamically balances customer demand, stock levels, and factory production under given constraints.
+---
