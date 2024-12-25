@@ -46,7 +46,7 @@ For this project, **AnyLogic** was used to simulate the supply chain system. Any
   - **Weekends (Saturday - Sunday)**: 2 customers per hour.
 - **Implementation**: A weekly schedule was created in the simulation.
   
-![Customer Arrival Rate Schedule](path_to_customer_arrival_rate_image)
+![Customer Arrival Rate Schedule](img/backOrder.png)
 
 ---
 
